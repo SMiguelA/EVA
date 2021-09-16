@@ -1,0 +1,635 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A888F493-8F9F-4BC0-86E8-8C089B26AEC6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Login_eva</RootNamespace>
+    <AssemblyName>Login_eva</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44346</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap4\css\bootstrap-grid.css" />
+    <Content Include="bootstrap4\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap4\css\bootstrap.css" />
+    <Content Include="bootstrap4\css\bootstrap.min.css" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap4\js\bootstrap.js" />
+    <Content Include="bootstrap4\js\bootstrap.min.js" />
+    <Content Include="codigo.js" />
+    <Content Include="index.html" />
+    <Content Include="jquery\jquery-3.3.1.min.js" />
+    <Content Include="Login_eva.aspx" />
+    <Content Include="paginaE.aspx" />
+    <Content Include="pedidos.aspx" />
+    <Content Include="plugins\dynamicTable\jquery.dynamicTable-1.0.0.js" />
+    <Content Include="popper\popper.min.js" />
+    <Content Include="Recursos\css\estilos.css" />
+    <Content Include="Recursos\css\Estilos2.css" />
+    <Content Include="Recursos\css\font.css" />
+    <Content Include="Recursos\css\pedidos.css" />
+    <Content Include="Recursos\fonts\sitio-web.svg" />
+    <Content Include="Recursos\img\comida1.jpg" />
+    <Content Include="Recursos\img\comida2.jpg" />
+    <Content Include="Recursos\img\comida3.jpg" />
+    <Content Include="Recursos\img\comida4.jpg" />
+    <Content Include="Recursos\img\comida5.jpg" />
+    <Content Include="Recursos\img\empleados2.jpg" />
+    <Content Include="Recursos\img\eva1.jpeg" />
+    <Content Include="Recursos\img\eva2.jpeg" />
+    <Content Include="Recursos\img\im.png" />
+    <Content Include="Recursos\img\menu1.jpeg" />
+    <Content Include="Recursos\img\menu2.jpeg" />
+    <Content Include="Recursos\img\menu3.jpeg" />
+    <Content Include="Recursos\img\menu4.jpeg" />
+    <Content Include="Recursos\img\menu5.jpeg" />
+    <Content Include="Recursos\img\menu6.jpeg" />
+    <Content Include="Recursos\img\menu7.jpeg" />
+    <Content Include="Recursos\img\menu8.jpeg" />
+    <Content Include="Recursos\js\jquery.js" />
+    <Content Include="Recursos\js\menu.js" />
+    <Content Include="Recursos\js\script.js" />
+    <Content Include="Recursos\librerias\alertifyjs\alertify.js" />
+    <Content Include="Recursos\librerias\alertifyjs\alertify.min.js" />
+    <Content Include="Recursos\librerias\alertifyjs\css\alertify.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\alertify.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\alertify.rtl.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\alertify.rtl.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\bootstrap.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\bootstrap.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\bootstrap.rtl.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\bootstrap.rtl.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\default.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\default.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\default.rtl.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\default.rtl.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\semantic.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\semantic.min.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\semantic.rtl.css" />
+    <Content Include="Recursos\librerias\alertifyjs\css\themes\semantic.rtl.min.css" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap.css" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Recursos\librerias\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Recursos\librerias\bootstrap\js\bootstrap.js" />
+    <Content Include="Recursos\librerias\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Recursos\librerias\bootstrap\js\npm.js" />
+    <Content Include="Recursos\librerias\dompdf\autoload.inc.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\Cpdf.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\dompdf_font_family_cache.dist.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\mustRead.html" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Times-Roman.afm.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\html5lib\Data.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\html5lib\InputStream.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\html5lib\Parser.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\html5lib\Tokenizer.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\html5lib\TreeBuilder.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Comment\Comment.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Comment\Commentable.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\CSSList\AtRuleBlockList.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\CSSList\CSSBlockList.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\CSSList\CSSList.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\CSSList\Document.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\CSSList\KeyFrame.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\OutputFormat.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Parser.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Parsing\OutputException.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Parsing\ParserState.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Parsing\SourceException.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Parsing\UnexpectedTokenException.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Property\AtRule.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Property\Charset.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Property\CSSNamespace.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Property\Import.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Property\Selector.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Renderable.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\RuleSet\AtRuleSet.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\RuleSet\DeclarationBlock.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\RuleSet\RuleSet.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Rule\Rule.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Settings.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\CalcFunction.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\CalcRuleValueList.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\Color.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\CSSFunction.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\CSSString.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\LineName.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\PrimitiveValue.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\RuleValueList.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\Size.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\URL.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\Value.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\lib\Sabberworm\CSS\Value\ValueList.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\phpunit.xml" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\bootstrap.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-calc-no-space-around-minus.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-charset-after-rule.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-charset-in-block.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-empty-grid-linename.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-empty.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-end-token-2.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-end-token.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-fault-tolerance.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\-tobedone.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\1readme.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\2readme.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\atrules.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\calc-nested.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\calc.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\case-insensitivity.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\colortest.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\comments.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\create-shorthands.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\docuwiki.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\empty-grid-linename.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\expand-shorthands.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\functions.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\grid-linename.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\hex-alpha.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\ie-hacks.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\ie.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\important.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\inner-color.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\line-numbers.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\missing-property-value.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\ms-filter.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\namespaces.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\nested.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\slashed.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\specificity.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\trailing-whitespace.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\unicode-range.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\unicode.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\unmatched_braces.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\unopened-close-brackets.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\url.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\values.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\webkit.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\files\whitespace.css" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\phpunit.xml" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\quickdump.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\CSSList\AtRuleBlockListTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\CSSList\DocumentTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\OutputFormatTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\ParserTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\RuleSet\DeclarationBlockTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\tests\Sabberworm\CSS\RuleSet\LenientParsingTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\index.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\AdobeFontMetrics.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Autoloader.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\BinaryStream.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\EncodingMap.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\EOT\File.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\EOT\Header.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Exception\FontNotFoundException.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Font.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Glyph\Outline.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Glyph\OutlineComponent.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Glyph\OutlineComposite.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Glyph\OutlineSimple.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Header.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\OpenType\File.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\OpenType\TableDirectoryEntry.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\DirectoryEntry.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Table.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\cmap.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\glyf.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\head.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\hhea.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\hmtx.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\kern.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\loca.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\maxp.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\name.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\nameRecord.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\os2.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\Table\Type\post.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\TrueType\Collection.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\TrueType\File.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\TrueType\Header.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\TrueType\TableDirectoryEntry.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\WOFF\File.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\WOFF\Header.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\src\FontLib\WOFF\TableDirectoryEntry.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\tests\FontLib\FontTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\phpunit.xml" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\autoload.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\DefaultStyle.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Document.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Gradient\Stop.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Style.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Surface\CPdf.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Surface\SurfaceCpdf.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Surface\SurfaceGmagick.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Surface\SurfaceInterface.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Surface\SurfacePDFLib.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\AbstractTag.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Anchor.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Circle.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\ClipPath.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Ellipse.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Group.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Image.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Line.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\LinearGradient.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Path.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Polygon.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Polyline.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\RadialGradient.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Rect.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Shape.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Stop.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\StyleTag.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\Text.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\src\Svg\Tag\UseTag.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\tests\Svg\StyleTest.php" />
+    <Content Include="Recursos\librerias\dompdf\lib\res\broken_image.png" />
+    <Content Include="Recursos\librerias\dompdf\lib\res\broken_image.svg" />
+    <Content Include="Recursos\librerias\dompdf\lib\res\html.css" />
+    <Content Include="Recursos\librerias\dompdf\phpcs.xml" />
+    <Content Include="Recursos\librerias\dompdf\src\Adapter\CPDF.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Adapter\GD.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Adapter\PDFLib.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Autoloader.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Canvas.php" />
+    <Content Include="Recursos\librerias\dompdf\src\CanvasFactory.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Cellmap.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Css\AttributeTranslator.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Css\Color.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Css\Style.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Css\Stylesheet.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Dompdf.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Exception.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Exception\ImageException.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FontMetrics.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\AbstractFrameDecorator.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\Block.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\Image.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\Inline.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\ListBullet.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\ListBulletImage.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\NullFrameDecorator.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\Page.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\Table.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\TableCell.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\TableRow.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\TableRowGroup.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameDecorator\Text.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\AbstractFrameReflower.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\Block.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\Image.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\Inline.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\ListBullet.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\NullFrameReflower.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\Page.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\Table.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\TableCell.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\TableRow.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\TableRowGroup.php" />
+    <Content Include="Recursos\librerias\dompdf\src\FrameReflower\Text.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame\Factory.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame\FrameList.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame\FrameListIterator.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame\FrameTree.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame\FrameTreeIterator.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Frame\FrameTreeList.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Helpers.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Image\Cache.php" />
+    <Content Include="Recursos\librerias\dompdf\src\JavascriptEmbedder.php" />
+    <Content Include="Recursos\librerias\dompdf\src\LineBox.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Options.php" />
+    <Content Include="Recursos\librerias\dompdf\src\PhpEvaluator.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\Absolute.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\AbstractPositioner.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\Block.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\Fixed.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\Inline.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\ListBullet.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\NullPositioner.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\TableCell.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Positioner\TableRow.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\AbstractRenderer.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\Block.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\Image.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\Inline.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\ListBullet.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\TableCell.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\TableRowGroup.php" />
+    <Content Include="Recursos\librerias\dompdf\src\Renderer\Text.php" />
+    <Content Include="Recursos\librerias\jquery-3.2.1.min.js" />
+    <Content Include="Recursos\librerias\select2\css\select2.css" />
+    <Content Include="Recursos\librerias\select2\css\select2.min.css" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ar.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\az.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\bg.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ca.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\cs.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\da.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\de.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\el.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\en.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\es.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\et.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\eu.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\fa.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\fi.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\fr.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\gl.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\he.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\hi.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\hr.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\hu.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\id.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\is.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\it.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ja.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\km.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ko.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\lt.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\lv.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\mk.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ms.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\nb.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\nl.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\pl.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\pt-BR.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\pt.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ro.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\ru.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\sk.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\sr.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\sv.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\th.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\tr.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\uk.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\vi.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\zh-CN.js" />
+    <Content Include="Recursos\librerias\select2\js\i18n\zh-TW.js" />
+    <Content Include="Recursos\librerias\select2\js\select2.full.js" />
+    <Content Include="Recursos\librerias\select2\js\select2.full.min.js" />
+    <Content Include="Recursos\librerias\select2\js\select2.js" />
+    <Content Include="Recursos\librerias\select2\js\select2.min.js" />
+    <Content Include="Recursos\phpMailer\Exception.php" />
+    <Content Include="Recursos\phpMailer\PHPMailer.php" />
+    <Content Include="Recursos\phpMailer\SMTP.php" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login_eva.aspx.cs">
+      <DependentUpon>Login_eva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_eva.aspx.designer.cs">
+      <DependentUpon>Login_eva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginaE.aspx.cs">
+      <DependentUpon>paginaE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginaE.aspx.designer.cs">
+      <DependentUpon>paginaE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pedidos.aspx.cs">
+      <DependentUpon>pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pedidos.aspx.designer.cs">
+      <DependentUpon>pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap4\css\.DS_Store" />
+    <Content Include="bootstrap4\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap4\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap4\css\bootstrap.css.map" />
+    <Content Include="bootstrap4\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap4\js\bootstrap.js.map" />
+    <Content Include="bootstrap4\js\bootstrap.min.js.map" />
+    <None Include="packages.config" />
+    <Content Include="Recursos\fonts\Montserrat-Bold.ttf" />
+    <Content Include="Recursos\fonts\Montserrat-Regular.ttf" />
+    <Content Include="Recursos\fonts\Pacifico-Regular.ttf" />
+    <Content Include="Recursos\fonts\sitio-web.eot" />
+    <Content Include="Recursos\fonts\sitio-web.ttf" />
+    <Content Include="Recursos\fonts\sitio-web.woff" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Recursos\librerias\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Recursos\librerias\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Recursos\librerias\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Recursos\librerias\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Recursos\librerias\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Recursos\librerias\dompdf\.travis.yml" />
+    <Content Include="Recursos\librerias\dompdf\composer.json" />
+    <Content Include="Recursos\librerias\dompdf\CONTRIBUTING.md" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Courier-Bold.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Courier-BoldOblique.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Courier-Oblique.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Courier.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans-Bold.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans-Bold.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans-BoldOblique.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans-BoldOblique.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans-Oblique.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans-Oblique.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSans.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono-Bold.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono-Bold.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono-BoldOblique.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono-BoldOblique.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono-Oblique.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono-Oblique.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSansMono.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif-Bold.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif-Bold.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif-BoldItalic.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif-BoldItalic.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif-Italic.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif-Italic.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\DejaVuSerif.ufm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Helvetica-Bold.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Helvetica-BoldOblique.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Helvetica-Oblique.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Helvetica.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Symbol.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Times-Bold.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Times-BoldItalic.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Times-Italic.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\Times-Roman.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\fonts\ZapfDingbats.afm" />
+    <Content Include="Recursos\librerias\dompdf\lib\html5lib\named-character-references.ser" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\.travis.yml" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\CHANGELOG.md" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\composer.json" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\composer.lock" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\Doxyfile" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-css-parser\README.md" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\.htaccess" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\.travis.yml" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\bower.json" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\composer.json" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\LICENSE" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\adobe-standard-encoding.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1250.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1251.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1252.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1253.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1254.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1255.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1257.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp1258.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\cp874.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-1.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-11.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-15.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-16.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-2.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-4.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-5.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-7.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\iso-8859-9.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\koi8-r.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\maps\koi8-u.map" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\phpunit.xml.dist" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\README.md" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\sample-fonts\IntelClear-Light.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-font-lib\sample-fonts\NotoSansShavian-Regular.ttf" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\.travis.yml" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\composer.json" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\COPYING" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\COPYING.GPL" />
+    <Content Include="Recursos\librerias\dompdf\lib\php-svg-lib\README.md" />
+    <Content Include="Recursos\librerias\dompdf\LICENSE.LGPL" />
+    <Content Include="Recursos\librerias\dompdf\phpunit.xml.dist" />
+    <Content Include="Recursos\librerias\dompdf\README.md" />
+    <Content Include="Recursos\librerias\dompdf\VERSION" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52427</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44346/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
